@@ -1,0 +1,19 @@
+.inputGroup{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.inputGroup .label{
+    text-align: left;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    font-weight: 550;
+    color: #708282;
+    display: flex;
+    justify-content: space-between;
+}
+
+.error{
+    color: #D47257;
+}

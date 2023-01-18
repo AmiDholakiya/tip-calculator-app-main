@@ -1,0 +1,19 @@
+.title_grid{
+    position: relative;
+    line-height: 2em;
+    height: 30%;
+    width: 100%;
+  }
+  .title{
+    position: absolute;
+    top: 50%;
+    font-weight: 700;
+    font-size: 25px;
+    color: #3F6264;
+    letter-spacing: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+  }

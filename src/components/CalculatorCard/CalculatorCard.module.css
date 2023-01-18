@@ -1,0 +1,111 @@
+.cardContainer {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    border-radius: 15px;
+    padding: 30px;
+    background-color: #EEFFFF;
+}
+.cardBody{
+    padding: 5px;
+    width: 100%;
+    display: flex;
+}
+
+.container {
+    border-radius: 2rem;
+    width: 100%;
+    min-height: 400px;
+    width: 50%;
+}
+
+.resultContainer {
+    background-color: #00474B;
+    margin-left: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.gridContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: .9vw 0;
+    gap:15px
+}
+
+.gridItem button{
+    width: 100%;
+    background-color: #00474B;
+    color: #EEFFFF;
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;
+    padding: 10px 25px;
+    border: 0px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.gridItem button:focus,.gridItem button:hover,.button_active{
+    color: #00474B !important;
+    background-color: #2FC4B1 !important;
+}
+
+.gridItem input{
+    width: 100%;
+    height: 100%;
+    min-width: none;
+    border: none;
+    background-color: #F3F8FB;
+    outline: none;
+    text-align: right;
+    color: #00474B;
+    caret-color: #2FC4B1;
+    font-size: 20px;
+    font-weight: 600;
+    padding-right: 5px;
+}
+
+.reset{
+    padding: 15px;
+    margin: 15px;
+    background-color: #2FC4B1;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    color: #00474B;
+    cursor: pointer;
+    outline: none;
+    width: -webkit-fill-available;
+}
+.reset:disabled{
+    background-color: #0D686D ;
+}
+
+@media screen and (max-width: 600px) {
+    .cardContainer{
+        border-bottom-left-radius:0px;
+        border-bottom-right-radius:0px;
+        width: 100%;
+    }
+    .cardBody{
+        flex-direction: column;
+    }
+    .container{
+        width: 100%;
+    }
+    .gridContainer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .resultContainer{
+        margin-left: 0px;
+    }
+} 

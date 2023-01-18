@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.titleContainer{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 3rem;
+    justify-content: center;
+    letter-spacing: .1rem;
+    word-spacing: 0.5rem;
+}
+
+.title{
+    color: #EAFFFF;
+    font-size: 18px;
+    
+}
+
+.subTitle{
+    color: #649498;
+    font-size: 15px;
+}
+
+.amount{
+    text-align: right;
+    width: 50%;
+    padding-right: 3rem;
+    color:#2FC4B1;
+    font-weight: 700;
+    font-size: 35px;
+    justify-content: center;
+}
