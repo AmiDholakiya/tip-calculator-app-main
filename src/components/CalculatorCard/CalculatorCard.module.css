@@ -4,10 +4,11 @@
     justify-content: space-between;
     margin: auto;
     border-radius: 15px;
-    padding: 30px;
+    padding: 30px 30px 30px 0px;
     background-color: #EEFFFF;
 }
-.cardBody{
+
+.cardBody {
     padding: 5px;
     width: 100%;
     display: flex;
@@ -17,12 +18,17 @@
     border-radius: 2rem;
     width: 100%;
     min-height: 400px;
-    width: 50%;
+    --bs-gutter-x: 5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .resultContainer {
     background-color: #00474B;
-    margin-left: 35px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -33,10 +39,10 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     margin: .9vw 0;
-    gap:15px
+    gap: 15px
 }
 
-.gridItem button{
+.gridItem button {
     width: 100%;
     background-color: #00474B;
     color: #EEFFFF;
@@ -52,12 +58,14 @@
     outline: none;
 }
 
-.gridItem button:focus,.gridItem button:hover,.button_active{
+.gridItem button:focus,
+.gridItem button:hover,
+.button_active {
     color: #00474B !important;
     background-color: #2FC4B1 !important;
 }
 
-.gridItem input{
+.gridItem input {
     width: 100%;
     height: 100%;
     min-width: none;
@@ -72,7 +80,7 @@
     padding-right: 5px;
 }
 
-.reset{
+.reset {
     padding: 15px;
     margin: 15px;
     background-color: #2FC4B1;
@@ -86,26 +94,30 @@
     outline: none;
     width: -webkit-fill-available;
 }
-.reset:disabled{
-    background-color: #0D686D ;
+
+.reset:disabled {
+    background-color: #0D686D;
 }
 
 @media screen and (max-width: 600px) {
-    .cardContainer{
-        border-bottom-left-radius:0px;
-        border-bottom-right-radius:0px;
+    .cardContainer {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
         width: 100%;
+        padding: 30px;
+
     }
-    .cardBody{
+
+    .cardBody {
         flex-direction: column;
     }
-    .container{
+
+    .container {
         width: 100%;
+        --bs-gutter-x: 0rem;
     }
+
     .gridContainer {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    .resultContainer{
-        margin-left: 0px;
-    }
-} 
+}

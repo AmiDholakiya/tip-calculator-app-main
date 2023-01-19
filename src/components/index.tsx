@@ -1,12 +1,12 @@
+import AmountReview from "./AmountReview";
 import AppTitle from "./AppTitle";
 import CalculatorCard from "./CalculatorCard";
 import Input from "./Input";
-import InputGroup from "./InputGroup";
-import AmountReview from "./AmountReview";
+import TipContainer from "./TipContainer";
 export {
-    AppTitle,
     AmountReview,
+    AppTitle,
     CalculatorCard,
     Input,
-    InputGroup,
+    TipContainer
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./AppTitle.module.css";
 
-const AppTitle = () => <div className={style.title_grid}>
+const AppTitle:React.FC = () => <div className={style.title_grid}>
     <div className={style.title}>
         <span>
         spli

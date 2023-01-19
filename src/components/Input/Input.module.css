@@ -1,4 +1,44 @@
-.input{
+.inputGroup {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.inputGroup .label {
+    text-align: left;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    font-weight: 550;
+    color: #708282;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputWrapper {
+    display: block;
+    padding: .5rem .8rem;
+    margin: .9vw 0;
+    border: none;
+    border-radius: 3px;
+    background-color: #F3F8FB;
+    position: relative;
+}
+
+.inputWrapper:focus-within,
+.inputWrapper:hover {
+    border: 2px solid #2FC4B1;
+    cursor: pointer;
+}
+
+.error .inputWrapper {
+    border: 2px solid #D47257 !important;
+}
+
+.error .label span {
+    color: #D47257;
+}
+
+.input {
     padding-left: 1.5rem;
     min-width: none;
     width: 100%;
@@ -13,34 +53,17 @@
     color: #00474B;
     caret-color: #2FC4B1;
 }
-.input:focus,.input:hover{
+
+.input:focus,
+.input:hover {
     cursor: pointer;
 }
 
-.inputWrapper{
-    display: block;
-    padding: .5rem .8rem;
-    margin: .9vw 0;
-    border: none;
-    border-radius: 3px;
-    background-color: #F3F8FB;
-    position: relative;
-}
-
-.error{
-    border: 2px solid #D47257  !important;
-}
-
-.inputIcon{
+.inputIcon {
     height: 1rem;
     width: 1rem;
     position: absolute;
-    box-sizing:border-box;
-    top:50%;
+    box-sizing: border-box;
+    top: 50%;
     transform: translateY(-50%);
-}
-
-.inputWrapper:focus-within,.inputWrapper:hover{
-    border: 2px solid #2FC4B1;
-    cursor: pointer;
 }

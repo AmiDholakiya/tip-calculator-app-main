@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import { AppTitle,CalculatorCard } from './components';
+import { AppTitle, CalculatorCard } from './components';
 
-function App() {
+const App:React.FC = () => {
   return (
     <div className="App">
-      <AppTitle/>
+      <AppTitle />
       <CalculatorCard />
     </div>
   );
