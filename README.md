@@ -17,7 +17,9 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 ## Overview
 
-- 
+- **Tip Calculator app** provides solution to calculate **Per pPrson Tip Amount** and **Per Person Total Amout With Tip** from certain values like, `Bill Amount`, `Tip Per` and `Total Person`.
+- All value from user provided will be more than Zero(0) then olny **Tip Amount** and **Total Amount** will be counted, otherwise calculator will displaye error message on respective field with Zero(0) value.
+- User can reset entire calculator after providing all three value of Left Side's container. 
 
 ### The challenge
 
@@ -30,8 +32,25 @@ Users should be able to:
 
 ### Screenshot
 
-![Home Screen](/public/homescreen.png?raw=true "Home Screen")
+1. Desktop View
 
+![Home Screen](/public/screens/homescreen.png?raw=true "Home Screen")
+
+2. Active State
+
+![Active State](/public/screens/activeState.png?raw=true "Active State")
+
+3. Error Handling with Zero(0) value
+
+![Error Handling](/public/screens/ErrorHandling.png?raw=true "Error Handling")
+
+4. Calculation Screen
+
+![Calcuation Screen](/public/screens/CalculationScreen.png?raw=true "Calculation Screen")
+
+5. Mobile View
+
+![Mobile View](/public/screens/mobileDesign.png?raw=true "Mobile View")
 
 ### Links
 - Live Site URL: (https://amidholakiya.github.io/tip-calculator-app-main/)
@@ -43,9 +62,11 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - CSS Grid
+- Moduler Css
 - [React](https://reactjs.org/) - JS library
 - [TypeScript](https://www.typescriptlang.org/docs/handbook/react.html)
 - [bootstrap](https://react-bootstrap.github.io/) - For styles
+- [Redux-toolkit](https://redux-toolkit.js.org/) - For managing data through single store
 
 
 ### What I learned
@@ -95,6 +116,12 @@ Most of the time I deployed React and NodeJS application on **EC2** as per the c
 - [Project Deployement in GithubPages](https://github.com/gitname/react-gh-pages) - This is an amazing short tutorial in which every steps are described in very detailed. I recommended this link for Application beploye in githubpages without error.
 
 ## Author
+- Github - [AmiDholakiya](https://github.com/AmiDholakiya)
+- Frontend Mentor - [@AmiDholakiya](https://www.frontendmentor.io/profile/AmiDholakiya)
 - LinkedIn - [Ami Dholakiya](https://www.linkedin.com/in/ami-dholakiya-046247181/)
 
 ## Acknowledgments
+
+- I would like to thank to [Frontend Mentor](https://www.frontendmentor.io/) to provide task with full descriptions and screen design
+- I appreciate the efforts of [Gitname Repository](https://github.com/gitname/react-gh-pages) to provide step by step tutorial of app deployment in [Gitpages](https://pages.github.com/).
+- I would like to thanks to [Gitpages](https://pages.github.com/) to provide free resources for app deployement.
