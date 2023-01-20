@@ -22,7 +22,7 @@ const CalculatorCard: React.FC = () => {
     useEffect(() => {
         if (dispatch && calculator) {
 
-            if (calculator.billAmount && calculator.tipPer && calculator.totalPeople)
+            if (calculator.billAmount && calculator.tipPer && calculator.totalPeople && calculator.billAmount !== "0" && calculator.totalPeople !== "0"  )
                 dispatch(calculateTip())
             else {
                 dispatch(updateState({ name: "tipAmount", value: "0.00" }));
@@ -47,6 +47,9 @@ const CalculatorCard: React.FC = () => {
                             if (e.currentTarget.value.match(/^([0-9]{1,})?(\.)?([0-9]{1,})?$/))
                                 updateData({ name: e.currentTarget.name, value: e.currentTarget.value })
                         }}
+                    error={
+                        ( calculator.billAmount === "0" ) ? "Can't be zero" : '' 
+                    }
                 />
                 <Input label="Select Tip %">
                     <TipContainer
@@ -70,6 +73,9 @@ const CalculatorCard: React.FC = () => {
                             if (e.currentTarget.value.match(/^([0-9]{1,})?(\.)?([0-9]{1,})?$/))
                                 updateData({ name: e.currentTarget.name, value: e.currentTarget.value })
                         }}
+                        error={
+                            ( calculator.totalPeople === "0" ) ? "Can't be zero" : '' 
+                        }
                 />
             </div>
             <div className={`${styles.container} ${styles.resultContainer}`}>

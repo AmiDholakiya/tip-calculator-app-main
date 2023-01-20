@@ -26,23 +26,15 @@ Users should be able to:
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Calculate the correct tip and total cost of the bill per person
+- tip and total will be reset automatically while any of the left side content will be updated by empty value
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Home Screen](/public/homescreen.png?raw=true "Home Screen")
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: (https://amidholakiya.github.io/tip-calculator-app-main/)
 
 ## My process
 
@@ -50,62 +42,59 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
 - CSS Grid
-- Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [TypeScript](https://www.typescriptlang.org/docs/handbook/react.html)
+- [bootstrap](https://react-bootstrap.github.io/) - For styles
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Most of the time I deployed React and NodeJS application on **EC2** as per the client requirements. But I have used **Github Pages** for this project. I followed one tutorial link which is already stated in [Useful resources](#useful-resources). Only few steps to follow and your application will be deployed within few minutes.
 
-To see how you can add code snippets, see below:
+### 1. install gh-pages in project
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+```shell
+ $ npm i gh-pages --save
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+### 2. Add Homepage in **package.jcon**
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+ ```diff
+    {
+      "name": "my-app",
+      "version": "0.1.0",
+    + "homepage": "https://gitname.github.io/react-gh-pages",
+      "private": true,
+ ```
+ 
+### 3. Scripts to deploye project
+```diff
+    +   "predeploy": "npm run build",
+    +   "deploy": "gh-pages -d build",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+ ```
+### 4. Push the source code in Github Repository
 
-### Continued development
+### 5. Push React App into the Github Repository
+```shell
+ $ npm run deploy
+```
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+### 6. Configure Gitpages
+- Goto **GitHub Pages** settings
+  > github **project repository** (in my case https://github.com/AmiDholakiya/tip-calculator-app-main) -> **Settings** -> **Code and Automation** -> **Pages**
+- Update the **Source** and **Branch** Values
+  > 1. **Source** -> `Deploy From Branch` 
+  > 2. **Branch** -> Branch : `gh-pages` Folder: `/ (root)`
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [TypeScript Resource](https://www.typescriptlang.org/docs/handbook/react.html) - This link helped me to resolved typescript error in redux-toolkit
+- [Project Deployement in GithubPages](https://github.com/gitname/react-gh-pages) - This is an amazing short tutorial in which every steps are described in very detailed. I recommended this link for Application beploye in githubpages without error.
 
 ## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- LinkedIn - [Ami Dholakiya](https://www.linkedin.com/in/ami-dholakiya-046247181/)
 
 ## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
